@@ -10,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Javalin app = Javalin.create();
+        Javalin app = Javalin.create(config -> config.plugins.enableDevLogging());
 
         app.get("/hello", ctx -> ctx.result("Hello world!"));
 
